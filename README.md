@@ -1,11 +1,11 @@
 ﻿# many-to-many-relationship in .Net Core MVC
  This project may help you to understand about many to many relationship in EF core and about relational database. 
  This project helps to understand following things.
- 1.What is bridge table
- 2. How to handle many to many relationship in .net core mvc using ef core
- 3.How to manage Dbset
- 3.How to upload image
- 4.Concept of service
+ -1.What is bridge table
+ -2. How to handle many to many relationship in .net core mvc using ef core
+ -3.How to manage Dbset
+ -3.How to upload image
+ -4.Concept of service
  And many more.....
  Create Post
 ![createstudent](https://github.com/Sagardip/Many-to-Many-Relationship-in-EF-core/blob/master/Screenshots/create%20post.JPG)
