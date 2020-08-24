@@ -1,0 +1,19 @@
+<div class="row pt-5">
+    <div class="col-md-2"></div>
+<div class="col-md-8 ">
+@model Category
+@{
+    var category= @Model as Category;
+}
+<h1 class="text-bold">@category.CategoryName</h1>
+<hr>
+@foreach (var item in category.PostCategories)
+{
+    <h5> @item.Post.Title</h5>
+    <hr>
+    <p>@item.Post.Description</p>
+
+}
+</div>
+<div class="col-md-2"></div>
+</div>

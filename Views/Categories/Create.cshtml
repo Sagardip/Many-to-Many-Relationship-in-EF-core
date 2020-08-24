@@ -1,0 +1,18 @@
+@model Category
+
+ <h1 class="form-title pt-3 text-center">Create New Category</h1>
+       <hr>
+       @if(TempData.ContainsKey("categorymessage")){
+       <h1 class="message-any">@TempData["categorymessage"]</h1>}
+<fieldset class="form-bg">
+<form class="m-1 p-1" enctype="multipart/form-data" method="post">
+    <div class="form-group">
+         <label class="text-dark" asp-for="CategoryName">Name</label>
+        <input asp-for="CategoryName" class="form-control"/>
+
+</div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</fieldset>
+
+

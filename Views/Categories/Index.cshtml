@@ -1,0 +1,9 @@
+@model IEnumerable<Category>
+
+     <th class="pt-5">
+     @foreach (var cat in Model)
+    {
+      <td>@cat.CategoryId</td>
+     <td> <a asp-action="Details" asp-route-id="@cat.CategoryId" style="text-transform:capitalize"> @cat.CategoryName</a></td>
+    }
+    </th>

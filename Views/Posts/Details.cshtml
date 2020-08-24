@@ -1,0 +1,21 @@
+<div class="row pt-5">
+    <div class="col-md-2"></div>
+<div class="col-md-8 ">
+@model Post
+@{
+    var post= @Model as Post;
+}
+<h1 class="text-bold">@post.Title</h1>
+<hr>
+<span>@post.PublishedDate</span>
+&nbsp;&nbsp;
+ From:  @foreach (var item in post.PostCategories)
+{
+       <span> @item.Category.CategoryName ,</span>
+}
+<hr>
+<div class="details-img"><img src="~/uploads/@post.DisplayImage"  alt="my img" asp-append-version="true"/></div></td>
+<p class="pt-3">@post.Description</p>
+</div>
+<div class="col-md-2"></div>
+</div>

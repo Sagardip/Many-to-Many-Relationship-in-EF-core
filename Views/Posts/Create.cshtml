@@ -1,0 +1,43 @@
+@model one.ViewModels.PostCreateVM
+@{
+    var photopath="~/uploads/"+(Model.EditImagePath ?? "logo.png");
+
+}
+ <h1 class="form-title pt-3 text-center">Create New Post</h1>
+ <hr>
+
+ <fieldset class="form-bg">
+<form class="m-1 p-1" enctype="multipart/form-data" method="post">
+    <div class="form-group">
+          <label class="text-dark" asp-for="Title"></label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+        <label class="text-dark" asp-for="Description">Description</label>
+        <input asp-for="Description" class="form-control"/>
+      <div class="custom-file">
+         <label class="text-light myfile-input" asp-for="DisplayImage">Image</label>
+       <input asp-for="DisplayImage" class="form-control-file text-light myfile-input bg-primary" type="file" id="file" />
+        <span asp-validation-for="DisplayImage" class="text-danger myfile-input"></span>
+        </div>
+        @* <div class="edit-image position"> <img src="@photopath" alt="editimage" class=" no-border" asp-append-version="true" id="imagepath"> *@
+        @* @Html.ListBox("SelectedCategor", (MultiSelectList)ViewBag.Roles, new { size = 8 }) *@
+         <select asp-for="SelectedCategory" asp-items="ViewBag.Categories" class="custom-select mt-5 pt-3 " >
+
+         </select>
+          <label class=" myfile-input" asp-for="DisplayImage">Choose Category</label>
+
+</div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</fieldset>
+@section Scripts{
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+  <script>
+    $(document).ready(function() {
+        $('.custom-select').select2();
+    });
+  </script>
+
+}
+

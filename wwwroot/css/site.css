@@ -1,0 +1,188 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+.post-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+li.nav-item a {
+  color: black !important;
+  font-size: 17px;
+
+}
+
+h1.poll-question {
+  position: relative;
+  font-size: 22px;
+}
+
+.poll-box {
+  background-color: #ffffff !important;
+  box-shadow: 0 0 1px 0;
+  color: #241f9f;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+h1.poll-question:before {
+  position: absolute;
+  content: "";
+  background: #e0dff3;
+  height: 15px;
+  width: 15px;
+  left: 0;
+  bottom: 5px;
+  border-radius: 50%;
+}
+
+ul.poll-list li {
+  list-style: none;
+}
+
+span.select2-selection.select2-selection--multiple {
+  margin-top: 22px;
+}
+
+h1.message-any {
+  font-size: 12px;
+  color: #ff1919;
+  padding: 4px 12px;
+  display: inline;
+}
+
+.form-control {
+  text-transform: capitalize !important;
+}
+
+.index-img img {
+  height: 70px;
+  width: 80px;
+}
+
+.edit-image img {
+  height: 90px;
+  width: 90px;
+}
+
+
+.details-img img {
+  height: 100%;
+  width: 100%;
+}
+
+.small-box.bg-dark {
+  position: absolute;
+  height: 100%;
+}
+
+li.nav-item a:hover {
+  color: red !important;
+}
+
+.small-box {
+  position: absolute;
+  height: 100%;
+  background: linear-gradient(45deg, #2d043a, #2b073a);
+
+}
+
+h1.user {
+  width: 44px;
+  height: 44px;
+  font-size: 19px;
+  background: #f8f8f8;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h5.cat-name {
+  font-size: 14px;
+
+}
+
+.nav-top {
+  background: white;
+  box-shadow: 1px -7px 15px 0;
+  padding: 6px;
+}
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+.menu-list li {
+  list-style-type: none;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+  /* Vertically center the text there */
+}

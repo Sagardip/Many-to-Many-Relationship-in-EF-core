@@ -1,0 +1,45 @@
+@model IEnumerable<Post>
+     @TempData["message"]
+     @TempData["Editmessage"]
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+        <th scope="col">Photo</th>
+      <th scope="col">Title</th>
+       <th scope="col">Published Date</th>
+      <th scope="col">Category</th>
+
+    </tr>
+  </thead>
+  <tbody>
+        @foreach (var Post in Model)
+    {
+    <tr>
+
+      <td>@Post.PostId</td>
+       <td> <div class="index-img"><img src="~/uploads/@Post.DisplayImage"  alt="my img" asp-append-version="true"/></div></td>
+      <td><a asp-action="Details" asp-route-id="@Post.PostId"><h1 class="post-title">@Post.Title</h1></a></td>
+      <td>@Post.PublishedDate</td>
+<td>
+  @string.Join(", ", Post.PostCategories.Select(p=>p.Category.CategoryName))
+</td>
+
+
+
+
+
+
+      <td>  <form asp-action="Delete" method="post" asp-route-id="@Post.PostId">
+      
+             <button class="btn btn-primary delete" >Delete</button>
+              </form></td>
+             <td><a asp-action="Create"  asp-route-id="@Post.PostId">
+             <button type="button" class="btn btn-warning">Edit</button>
+              </a></td>
+    </tr>
+    }
+</tbody>
+</table>
+
+
